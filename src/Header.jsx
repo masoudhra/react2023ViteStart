@@ -1,19 +1,20 @@
 // conditional rendering
 // if - else
+// ternary operator
 
 function Header() {
   const isLogin = true;
 
-  if (isLogin) {
-    return (
-      <header>
-        <button>Dashbourd</button>
-      </header>
-    );
-  }
   return (
     <header>
-      <button>Login</button>
+      {isLogin ? (
+        <div>
+          <button>Dashboard</button>
+          <button>Basket</button>
+        </div>
+      ) : (
+        <button>Login</button>
+      )}
     </header>
   );
 }
