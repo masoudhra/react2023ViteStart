@@ -1,6 +1,7 @@
 // conditional rendering
 // if - else
 // ternary operator
+// &&
 
 function Header() {
   const isLogin = true;
@@ -10,11 +11,12 @@ function Header() {
       {isLogin ? (
         <div>
           <button>Dashboard</button>
-          <button>Basket</button>
+          
         </div>
       ) : (
         <button>Login</button>
       )}
+      {isLogin && <button>Cart</button>}
     </header>
   );
 }
