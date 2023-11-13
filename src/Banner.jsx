@@ -1,13 +1,13 @@
 
 
 function Banner(props) {
-    
+  const {title, description, numOfStudents} = props  
   return (
     <div>
         <hr />
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
-        <span>{props.numOfStudents}</span>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <span>{numOfStudents}</span>
         <hr />
     </div>
   )
