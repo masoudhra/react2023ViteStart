@@ -1,16 +1,21 @@
+// props: yek seri data be banner midim va dar componente baner estefade mikonim
 
 import Header from "./Header.jsx";
 import CourseList from "./CourseList.jsx";
+import Banner from "./Banner.jsx";
 
 function App() {
   return (
     <div>
       <Header />
-      <h1>React 2023</h1>
+      <Banner
+        title="React 2023"
+        description="This is a programming website"
+        numOfStudents={100}
+      />
       <CourseList />
-      
     </div>
   );
 }
 
-export default App
+export default App;
