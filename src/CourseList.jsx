@@ -6,12 +6,12 @@ function CourseList() {
     <div>
       <h3>Course List</h3>
       <ul>
-        {courses.map((course) => (
-          <li>{course}</li>
+        {courses.map((course, index) => (
+          <li key={index}>{course}</li>
         ))}
       </ul>
     </div>
   );
 }
-
+                                                                                 
 export default CourseList;
