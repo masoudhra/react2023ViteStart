@@ -1,4 +1,5 @@
-function CourseCard({data: {name, description}}) {
+function CourseCard(props) {
+    const {data: {name, description}} = props
   return (
     <li>
       <h4>{name}</h4>
