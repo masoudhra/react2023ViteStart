@@ -1,12 +1,15 @@
-const Counter = () => {
+import { useState } from "react";
 
-function increaseHandler(){
-    console.log("increase");
-}
+const Counter = () => {
+const [counter, setCounter ] = useState(0)
+
+
+const increaseHandler = () =>  setCounter(counter + 1);
 
   return (
     <div>
       <h1>Counter</h1>
+      <p>{counter}</p>
       <button onClick={increaseHandler}>Increase</button>
     </div>
   );
