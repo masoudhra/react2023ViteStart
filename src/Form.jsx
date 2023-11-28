@@ -3,9 +3,10 @@ import { useState } from "react";
 function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
 
   const loginHandler = () => {
-    console.log({email, password});
+    console.log({ email, password, role });
   };
 
   const emailHandler = (event) => {
@@ -14,6 +15,10 @@ function Form() {
 
   const passwordHandler = (event) => {
     setPassword(event.target.value);
+  };
+
+  const selectHandler = (event) => {
+    setRole(event.target.value)
   };
 
   return (
@@ -30,6 +35,11 @@ function Form() {
         value={password}
         onChange={passwordHandler}
       />
+      <select value={role} onChange={selectHandler}>
+        <option value="admin">User</option>
+        <option value="writer">Writer</option>
+        <option value="admin">Admin</option>
+      </select>
       <button onClick={loginHandler}>Login</button>
     </div>
   );
