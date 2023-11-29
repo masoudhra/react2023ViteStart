@@ -4,9 +4,10 @@ function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("user");
+  const [gender, setGender] = useState("male")
 
   const loginHandler = () => {
-    console.log({ email, password, role });
+    console.log({ email, password, role, gender });
   };
 
   const emailHandler = (event) => {
@@ -18,7 +19,11 @@ function Form() {
   };
 
   const selectHandler = (event) => {
-    setRole(event.target.value)
+    setRole(event.target.value);
+  };
+
+  const genderHandler = (event) => {
+    setGender(event.target.value);
   };
 
   return (
@@ -40,6 +45,34 @@ function Form() {
         <option value="writer">Writer</option>
         <option value="admin">Admin</option>
       </select>
+      <div>
+        <label htmlFor="male">Male</label>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          onChange={genderHandler}
+          checked={gender === "male"}
+        />
+        <label htmlFor="female">Female</label>
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="female"
+          onChange={genderHandler}
+          checked={gender === "female"}
+        />
+        <label htmlFor="other">Other</label>
+        <input
+          type="radio"
+          name="gender"
+          id="other"
+          value="other"
+          onChange={genderHandler}
+          checked={gender === "other"}
+        />
+      </div>
       <button onClick={loginHandler}>Login</button>
     </div>
   );
