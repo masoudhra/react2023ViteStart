@@ -14,10 +14,10 @@ function App() {
         title="React 2023"
         description="This is a programming website"
         numOfStudents={100}
-      />
-      <CourseList /> */}
-      {/* <Counter /> */}
-      <Form />
+      /> */}
+      <CourseList />
+      {/* <Counter />
+      <Form /> */}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 // List rendering
 import CourseCard from "./CourseCard";
+import styles from "./CourseList.module.css"
 
 function CourseList() {
   const courses = [
@@ -10,7 +11,7 @@ function CourseList() {
   ];
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Course List</h3>
       <ul>
         {courses.map((course) => (
