@@ -10,13 +10,13 @@ import Form from "./Form.jsx";
 function App() {
   return (
     <div>
-      {/* <Header />
+      {/* <Header /> */}
       <Banner
         title="React 2023"
         description="This is a programming website"
         numOfStudents={100}
-      /> */}
-      <CourseList />
+      />
+      {/* <CourseList /> */}
       {/* <Counter />
       <Form /> */}
     </div>
